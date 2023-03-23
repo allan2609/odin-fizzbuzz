@@ -8,15 +8,36 @@
   </head>
   <body>
     <div class="header">
-      <a href="https://github.com/allan2609">Profile</a>
+      <a href="https://github.com/allan2609">My profile</a>
     </div>
 
     <div class="content">
-
+      <div class="description">
+        Fizz buzz is a group word game for children to teach them about division. Players take turns to count incrementally, replacing any number divisible by three with the word "fizz", and any number divisible by five with the word "buzz", and any number divisible by both 3 and 5 with the word "fizzbuzz".
+      </div>
+      <div class="signature">
+        -Wikipedia
+      </div>
     </div>
 
     <div class="footer">
       © allan2609
     </div>
+
+    <script>
+      let answer = document.querySelector('.answer');
+
+      for (let i = 1; i <= answer; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+          console.log("FizzBuzz");
+        } else if (i % 3 === 0) {
+          console.log("Fizz");
+        } else if (i % 5 === 0) {
+          console.log("Buzz");
+        } else {
+          console.log(i);
+        }
+      }
+    </script>
   </body>
 </html>
