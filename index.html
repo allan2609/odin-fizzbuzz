@@ -18,6 +18,19 @@
       <div class="signature">
         -Wikipedia
       </div>
+
+      <div class="form">
+        <label for="numberField">Please enter the number you would like to FizzBuzz up to</label>
+        <input type="text" min="1" max="100" required id="numberField" class="numberField" onKeyDown="if(event.keyCode==13) clickSubmit()" ;>
+        <div class="buttons">
+          <input type="submit" value="Submit number" id="numberSubmit" class="numberSubmit" onclick="startGame();">
+          <input type="submit" value="Start over" onclick="resetGame();">
+        </div>
+      </div>
+    </div>
+
+    <div class="results">
+      <p id="numbers"></p>
     </div>
 
     <div class="footer">
@@ -25,18 +38,29 @@
     </div>
 
     <script>
-      let answer = document.querySelector('.answer');
+      let answer = parseInt.document.querySelector(".numberField");
 
-      for (let i = 1; i <= answer; i++) {
-        if (i % 3 === 0 && i % 5 === 0) {
-          console.log("FizzBuzz");
-        } else if (i % 3 === 0) {
-          console.log("Fizz");
-        } else if (i % 5 === 0) {
-          console.log("Buzz");
-        } else {
-          console.log(i);
+      function startGame() {
+        for (let i = 1; i <= answer; i++) {
+          if (i % 3 === 0 && i % 5 === 0) {
+            numbers.textContent = ("FizzBuzz");
+          } else if (i % 3 === 0) {
+            numbers.textContent = ("Fizz");
+          } else if (i % 5 === 0) {
+            numbers.textContent = ("Buzz");
+          } else {
+            numbers.textContent = (i);
+          }
         }
+      }
+
+      function clickSubmit() {
+        document.getElementById("numberSubmit").click();
+      }
+
+      function resetGame() {
+        numbers.textContent = '';
+        numberSubmit.textContent = '';
       }
     </script>
   </body>
