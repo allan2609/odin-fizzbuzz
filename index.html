@@ -43,7 +43,7 @@
       function startGame() {
         for (let i = 1; i <= answer; i++) {
           if (i % 3 === 0 && i % 5 === 0) {
-            numbers.textContent = ("FizzBuzz");
+            document.body.numbers += "FizzBuzz";
           } else if (i % 3 === 0) {
             numbers.textContent = ("Fizz");
           } else if (i % 5 === 0) {
