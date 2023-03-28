@@ -38,12 +38,13 @@
     </div>
 
     <script>
-      let answer = parseInt.document.querySelector(".numberField");
+      let answer = document.getElementById("numberField").value;
 
       function startGame() {
         for (let i = 1; i <= answer; i++) {
           if (i % 3 === 0 && i % 5 === 0) {
-            document.body.numbers += "FizzBuzz";
+            //document.body.numbers += "FizzBuzz";
+            numbers.textContent = ("FizzBuzz");
           } else if (i % 3 === 0) {
             numbers.textContent = ("Fizz");
           } else if (i % 5 === 0) {
@@ -60,7 +61,7 @@
 
       function resetGame() {
         numbers.textContent = '';
-        numberSubmit.textContent = '';
+        numberField.textContent = '';
       }
     </script>
   </body>
