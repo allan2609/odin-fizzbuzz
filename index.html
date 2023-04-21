@@ -39,11 +39,13 @@
 
     <script>
       let answer = document.getElementById("numberField").value;
+      const numbers = document.getElementById("numbers");
 
       function startGame() {
         for (let i = 1; i <= answer; i++) {
-          if (i % 3 === 0 && i % 5 === 0) {
-            //document.body.numbers += "FizzBuzz";
+          if (i === 1) {
+            numbers.textContent = 1;
+          } else if (i % 3 === 0 && i % 5 === 0) {
             numbers.textContent = (numbers.textContent + ", FizzBuzz");
           } else if (i % 3 === 0) {
             numbers.textContent = (numbers.textContent + ", Fizz");
@@ -53,16 +55,17 @@
             numbers.textContent = (numbers.textContent + ", " + i);
           }
         }
-      }
+      };
 
       function clickSubmit() {
         document.getElementById("numberSubmit").click();
-      }
+      };
 
       function resetGame() {
         numbers.textContent = '';
         numberField.textContent = '';
-      }
+        answer = '';
+      };
     </script>
   </body>
 </html>
